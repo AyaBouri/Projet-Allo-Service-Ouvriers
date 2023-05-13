@@ -1,0 +1,45 @@
+ServiceIndexView la table ligathkmli f l'affichage des donnees 
+[Display(Name= "#")] lh9ache tableau kaytaficha fih e# lfou9e
+[Display(Name="Nom du Service")] permet de controller la 1 colonne du tableau
+
+code secour du CRUD 
+ MyContext db;
+        public ServiceController(MyContext db)
+        {
+            this.db = db;
+        }
+        public IActionResult Index()
+        {
+            return View();
+        }
+        //public IActionResult Index()
+        //{
+        //    List<ServiceIndexModel> services = db.services.Select(s=>new ServiceIndexModel(s)).ToList();
+        //    return View(services);
+        //}
+        //public IActionResult Add()
+        //{
+        //    return View();
+        //}
+        //[HttpPost]
+        //public IActionResult Add(ServiceCreateModelView model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.services.Add(model);
+        //        db.SaveChanges();
+        //        return View("Index");
+        //    }
+        //    return View();
+        //}
+        //public IActionResult Delete(int id) 
+        //{
+        //    Service service = db.services.Where(s => s.ServiceId == id).FirstOrDefault();
+        //    if (service != null)
+        //    {
+        //        db.services.Remove(service);
+        //        db.SaveChanges();
+        //    }
+        //    return View();
+        //}
+[IsAdmin] fou9e le controlleur koulou kasse obligatoire ykoune Admin bache y9de y ajouter Service
